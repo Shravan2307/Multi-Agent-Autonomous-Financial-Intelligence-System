@@ -2,16 +2,24 @@ from enum import Enum
 from uuid import UUID
 from pydantic import BaseModel, Field
 from app.models.phase2 import DecisionTraceStep, Recommendation, RiskLevel
-from app.schemas import Evidence, UserProfile
-class DataQuality(str, Enum): GOOD='GOOD'; PARTIAL='PARTIAL'; DEGRADED='DEGRADED'; UNAVAILABLE='UNAVAILABLE'
+from app.schemas import AgentOutput, Evidence, UserProfile
+
+class DataQuality(str, Enum):
+    GOOD = 'GOOD'
+    PARTIAL = 'PARTIAL'
+    DEGRADED = 'DEGRADED'
+    UNAVAILABLE = 'UNAVAILABLE'
+
 class DataQualityReport(BaseModel):
     market_data: DataQuality
     agent_coverage: DataQuality
     evidence: DataQuality
+
 class FinalIntelligenceOutput(BaseModel):
     run_id: UUID
     symbol: str
     status: str
+    agents: list[AgentOutput] = Field(default_factory=list)
     recommendation: Recommendation
     signal: str
     score: float = Field(ge=0, le=100)

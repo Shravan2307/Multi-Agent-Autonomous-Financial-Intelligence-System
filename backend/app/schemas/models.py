@@ -129,3 +129,13 @@ class IntelligenceResponse(BaseModel):
     request_id: UUID
     status: PipelineStatus
     agents: list[AgentOutput]
+    run_id: Optional[UUID] = None
+    recommendation: Optional[Any] = None
+    signal: Optional[str] = None
+    score: Optional[float] = Field(default=None, ge=0, le=100)
+    confidence: Optional[float] = Field(default=None, ge=0, le=1)
+    risk_level: Optional[str] = None
+    profile: Optional[UserProfile] = None
+    evidence: list[Evidence] = Field(default_factory=list)
+    decision_trace: list[Any] = Field(default_factory=list)
+    data_quality: Optional[Any] = None

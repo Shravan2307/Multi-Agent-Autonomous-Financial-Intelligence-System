@@ -1,4 +1,4 @@
-# Frontend Architecture Note: AstraVest Intelligence (Light-Theme Multipage Rebuild)
+# Frontend Architecture Note: FactorialFinance Intelligence (Light-Theme Multipage Rebuild)
 
 > **Document Status:** Complete (Phase 0 Audit Gate Deliverable)  
 > **Author:** Principal Frontend Architect & Product Designer  
@@ -14,7 +14,7 @@ The user requested a complete redesign of the initial prototype single-page dark
 ### Key Architectural Shift
 * **From Single-Page Console -> To Dedicated Multipage Product:** Information is segregated across 7 dedicated routes (`/`, `/analyze`, `/analysis/:sessionId`, `/portfolio`, `/evidence`, `/sessions`, `/settings`).
 * **From Dark Cyberpunk -> To Premium Editorial Light Theme:** Replaced dense dark background panels with warm off-white canvas (`#f8fafc`), clean white cards (`#ffffff`), slate hairline borders (`#e2e8f0`), deep ink typography (`#0f172a`), cobalt blue primary accents (`#2563eb`), and generous 8px spatial grid padding.
-* **Onboarding & Tour Engine:** Built a 11-step interactive product tour (`StepTourManager`) anchored to real UI landmarks across routes with local storage persistence (`astravest_tour_completed`).
+* **Onboarding & Tour Engine:** Built a 11-step interactive product tour (`StepTourManager`) anchored to real UI landmarks across routes with local storage persistence (`FactorialFinance_tour_completed`).
 
 ---
 
@@ -54,7 +54,7 @@ The user requested a complete redesign of the initial prototype single-page dark
 
 The product tour (`ProductTour.tsx`) guides retail investors and judges step by step:
 
-1. **Welcome to AstraVest Intelligence:** Overview of explainable AI investment intelligence.
+1. **Welcome to FactorialFinance Intelligence:** Overview of explainable AI investment intelligence.
 2. **Multipage Navigation Model:** Explains Overview, Analyze, Analysis Detail, Portfolio, Evidence, Sessions, Settings.
 3. **Behavioral Profile Selector:** Explains Conservative (capital preservation) vs Aggressive (momentum growth).
 4. **Analyze a Ticker:** Demonstrates ticker search, profile choice, and starting analysis.
@@ -64,7 +64,7 @@ The product tour (`ProductTour.tsx`) guides retail investors and judges step by 
 8. **Portfolio State & HHI Concentration:** Explains asset allocation and the Herfindahl-Hirschman Index ($HHI > 0.25$ high risk threshold).
 9. **Review Session History:** Shows how to revisit and replay past research sessions.
 10. **Degraded Data Safety Enforcement:** Explains how feed timeouts, missing filings, or conflicting signals trigger amber safety banners and block uncited recommendations.
-11. **Finish & Getting Started Checklist:** Completes tour, persists `astravest_tour_completed=true` in localStorage, and reveals the Overview checklist.
+11. **Finish & Getting Started Checklist:** Completes tour, persists `FactorialFinance_tour_completed=true` in localStorage, and reveals the Overview checklist.
 
 ---
 

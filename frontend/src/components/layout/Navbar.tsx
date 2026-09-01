@@ -75,8 +75,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onRunAnalysis }) => {
           {/* Logomark — simple geometric mark */}
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
             <rect width="28" height="28" rx="6" fill="var(--color-accent)" />
-            <path d="M7 20L14 8l7 12" stroke="white" strokeWidth="2" strokeLinejoin="round" fill="none"/>
-            <circle cx="14" cy="8" r="2" fill="white"/>
+            <path d="M7 20L14 8l7 12" stroke="white" strokeWidth="2" strokeLinejoin="round" fill="none" />
+            <circle cx="14" cy="8" r="2" fill="white" />
           </svg>
           <span
             style={{
@@ -87,7 +87,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onRunAnalysis }) => {
               letterSpacing: '-0.01em',
             }}
           >
-            AstraVest
+            FactorialFinanceaVest
           </span>
           <span
             style={{

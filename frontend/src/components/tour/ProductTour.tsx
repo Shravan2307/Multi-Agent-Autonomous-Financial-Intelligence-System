@@ -14,9 +14,9 @@ interface TourStep {
 const TOUR_STEPS: TourStep[] = [
   {
     stepNumber: 1,
-    title: 'Welcome to AstraVest Intelligence',
+    title: 'Welcome to FactorialFinance Intelligence',
     targetRoute: '/',
-    description: 'AstraVest Intelligence turns market data, SEBI regulatory filings, technical momentum, and behavioral risk profiles into explainable investment intelligence.',
+    description: 'FactorialFinance Intelligence turns market data, SEBI regulatory filings, technical momentum, and behavioral risk profiles into explainable investment intelligence.',
     keyTakeaway: 'Institutional-grade research designed for retail investors. The system never pressuring you into a trade.'
   },
   {
@@ -86,7 +86,7 @@ const TOUR_STEPS: TourStep[] = [
     stepNumber: 11,
     title: 'Tour Complete — You Are Ready!',
     targetRoute: '/',
-    description: 'You are ready to explore AstraVest Intelligence. You can replay this tour anytime from the Settings page or Top Bar.',
+    description: 'You are ready to explore FactorialFinance Intelligence. You can replay this tour anytime from the Settings page or Top Bar.',
     keyTakeaway: 'Start by selecting a stock ticker on the Overview or Analyze page.'
   }
 ];
@@ -115,7 +115,7 @@ export const ProductTour: React.FC<ProductTourProps> = ({ isOpen, onClose }) => 
     if (currentStepIdx < TOUR_STEPS.length - 1) {
       setCurrentStepIdx((prev) => prev + 1);
     } else {
-      localStorage.setItem('astravest_tour_completed', 'true');
+      localStorage.setItem('FactorialFinance_tour_completed', 'true');
       onClose();
     }
   };
@@ -127,7 +127,7 @@ export const ProductTour: React.FC<ProductTourProps> = ({ isOpen, onClose }) => 
   };
 
   const handleSkip = () => {
-    localStorage.setItem('astravest_tour_completed', 'true');
+    localStorage.setItem('FactorialFinance_tour_completed', 'true');
     onClose();
   };
 
