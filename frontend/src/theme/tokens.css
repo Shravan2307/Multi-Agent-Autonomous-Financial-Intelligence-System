@@ -1,4 +1,4 @@
-/* AstraVest Intelligence — Strict Semantic Design Tokens
+/* FactorialFinance Intelligence — Strict Semantic Design Tokens
  * Rule: color carries meaning. If it's not interactive or risk-state, it's gray.
  *
  * Accent blue  → ONLY on interactive elements: buttons, active nav, links, focus rings
@@ -10,37 +10,49 @@
 
 :root {
   /* --- Canvas & Surfaces --- */
-  --color-canvas:   #FAFAF8;   /* warm near-white page background */
-  --color-surface:  #FFFFFF;   /* card fills, panel backgrounds */
-  --color-subtle:   #F2F2EF;   /* table row alt, secondary panel fills */
-  --color-overlay:  rgba(20, 22, 26, 0.45); /* modal backdrop */
+  --color-canvas: #FAFAF8;
+  /* warm near-white page background */
+  --color-surface: #FFFFFF;
+  /* card fills, panel backgrounds */
+  --color-subtle: #F2F2EF;
+  /* table row alt, secondary panel fills */
+  --color-overlay: rgba(20, 22, 26, 0.45);
+  /* modal backdrop */
 
   /* --- Ink / Text --- */
-  --color-ink:       #14161A;  /* primary text — near-black, not pure black */
-  --color-ink-muted: #5C5F66;  /* secondary labels, captions */
-  --color-ink-faint: #9CA3AF;  /* placeholders, disabled */
+  --color-ink: #14161A;
+  /* primary text — near-black, not pure black */
+  --color-ink-muted: #5C5F66;
+  /* secondary labels, captions */
+  --color-ink-faint: #9CA3AF;
+  /* placeholders, disabled */
 
   /* --- Borders & Dividers (one value, used everywhere) --- */
-  --color-border:    #E8E8E5;  /* hairline — the only border color */
-  --color-border-md: #D1D1CE;  /* slightly stronger for focused / active borders */
+  --color-border: #E8E8E5;
+  /* hairline — the only border color */
+  --color-border-md: #D1D1CE;
+  /* slightly stronger for focused / active borders */
 
   /* --- Interactive Accent (one hue, full stop) --- */
-  --color-accent:       #1B4FD8;  /* deep index-blue */
+  --color-accent: #1B4FD8;
+  /* deep index-blue */
   --color-accent-hover: #1640B8;
-  --color-accent-light: #EEF2FF;  /* accent surface tint for selected states */
-  --color-accent-text:  #1B4FD8;  /* accent text on white */
+  --color-accent-light: #EEF2FF;
+  /* accent surface tint for selected states */
+  --color-accent-text: #1B4FD8;
+  /* accent text on white */
 
   /* --- Risk Traffic-Light (ONLY for risk state communication) --- */
-  --color-risk-safe:         #16A34A;
-  --color-risk-safe-bg:      #F0FDF4;
-  --color-risk-safe-border:  #86EFAC;
+  --color-risk-safe: #16A34A;
+  --color-risk-safe-bg: #F0FDF4;
+  --color-risk-safe-border: #86EFAC;
 
-  --color-risk-watch:        #D97706;
-  --color-risk-watch-bg:     #FFFBEB;
+  --color-risk-watch: #D97706;
+  --color-risk-watch-bg: #FFFBEB;
   --color-risk-watch-border: #FCD34D;
 
-  --color-risk-breach:        #DC2626;
-  --color-risk-breach-bg:     #FEF2F2;
+  --color-risk-breach: #DC2626;
+  --color-risk-breach-bg: #FEF2F2;
   --color-risk-breach-border: #FCA5A5;
 
   /* --- Shadows (subtle depth, never colored) --- */
@@ -50,7 +62,7 @@
   --shadow-lg: 0 8px 24px rgba(20, 22, 26, 0.08), 0 4px 8px rgba(20, 22, 26, 0.04);
 
   /* --- Typography --- */
-  --font-ui:   'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-ui: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-data: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'Courier New', monospace;
 
   /* --- Spacing grid (8px base) --- */

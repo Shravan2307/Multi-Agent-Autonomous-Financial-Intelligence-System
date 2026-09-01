@@ -18,7 +18,7 @@ interface AppState {
   activeProfile: RiskProfile;
   activeScenario: string;
   isMockMode: boolean;
-  
+
   // Current Active Analysis State
   isLoading: boolean;
   isAnalyzingWS: boolean;
@@ -26,15 +26,15 @@ interface AppState {
   prevAnalysisResult: AnalysisResponse | null;
   wsEvents: WSEvent[];
   wsConnectionState: 'disconnected' | 'connecting' | 'live' | 'reconnecting' | 'error';
-  
+
   // UI Panels & Drawer States
   selectedCitation: Citation | null;
   isCitationDrawerOpen: boolean;
   activeTab: 'overview' | 'analyze' | 'portfolio' | 'evidence' | 'sessions' | 'settings';
-  
+
   // Session History
   sessionsHistory: SessionRecord[];
-  
+
   // Actions
   toggleTheme: () => void;
   setTheme: (theme: 'dark' | 'light') => void;
@@ -54,7 +54,7 @@ interface AppState {
 }
 
 const getInitialTheme = (): 'dark' | 'light' => {
-  const saved = localStorage.getItem('astravest_theme');
+  const saved = localStorage.getItem('FactorialFinance_theme');
   if (saved === 'dark' || saved === 'light') return saved;
   return 'dark';
 };
@@ -107,7 +107,7 @@ export const useAppStore = create<AppState>((set) => {
 
     toggleTheme: () => set((state) => {
       const nextTheme = state.theme === 'dark' ? 'light' : 'dark';
-      localStorage.setItem('astravest_theme', nextTheme);
+      localStorage.setItem('FactorialFinance_theme', nextTheme);
       if (typeof document !== 'undefined') {
         document.documentElement.className = nextTheme;
       }
@@ -115,7 +115,7 @@ export const useAppStore = create<AppState>((set) => {
     }),
 
     setTheme: (theme) => {
-      localStorage.setItem('astravest_theme', theme);
+      localStorage.setItem('FactorialFinance_theme', theme);
       if (typeof document !== 'undefined') {
         document.documentElement.className = theme;
       }

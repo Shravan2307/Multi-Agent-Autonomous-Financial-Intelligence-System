@@ -39,7 +39,7 @@ export function App() {
   const wsClientRef = useRef<AgentTraceWebSocketClient | null>(null);
 
   useEffect(() => {
-    const done = localStorage.getItem('astravest_tour_completed');
+    const done = localStorage.getItem('FactorialFinance_tour_completed');
     if (!done) setIsTourOpen(true);
   }, []);
 
@@ -113,13 +113,13 @@ export function App() {
 
         <main style={{ flex: 1, overflowY: 'auto', minWidth: 0 }}>
           <Routes>
-            <Route path="/"                   element={<OverviewPage onRunAnalysis={handleRunAnalysis} />} />
-            <Route path="/analyze"            element={<AnalyzePage onRunAnalysis={handleRunAnalysis} />} />
+            <Route path="/" element={<OverviewPage onRunAnalysis={handleRunAnalysis} />} />
+            <Route path="/analyze" element={<AnalyzePage onRunAnalysis={handleRunAnalysis} />} />
             <Route path="/analysis/:sessionId" element={<AnalysisDetailPage />} />
-            <Route path="/portfolio"           element={<PortfolioPage />} />
-            <Route path="/evidence"            element={<EvidencePage />} />
-            <Route path="/sessions"            element={<SessionsPage />} />
-            <Route path="/settings"            element={<SettingsPage onOpenTour={() => setIsTourOpen(true)} />} />
+            <Route path="/portfolio" element={<PortfolioPage />} />
+            <Route path="/evidence" element={<EvidencePage />} />
+            <Route path="/sessions" element={<SessionsPage />} />
+            <Route path="/settings" element={<SettingsPage onOpenTour={() => setIsTourOpen(true)} />} />
           </Routes>
 
           {/* Quiet status strip — diagnostics live here, not in the header */}
@@ -147,7 +147,7 @@ export function App() {
               </span>
             )}
             <span style={{ marginLeft: 'auto', fontFamily: 'var(--font-ui)', fontSize: 11, color: 'var(--color-ink-faint)' }}>
-              AstraVest Intelligence · Non-authoritative research
+              FactorialFinanceaVest Intelligence · Non-authoritative research
             </span>
           </div>
         </main>

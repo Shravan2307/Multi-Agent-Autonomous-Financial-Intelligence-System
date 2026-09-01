@@ -1,5 +1,5 @@
 // src/types/index.ts
-// Comprehensive TypeScript domain contracts for AstraVest Intelligence
+// Comprehensive TypeScript domain contracts for FactorialFinance Intelligence
 
 export type RiskProfile = 'Conservative' | 'Aggressive' | 'Moderate';
 

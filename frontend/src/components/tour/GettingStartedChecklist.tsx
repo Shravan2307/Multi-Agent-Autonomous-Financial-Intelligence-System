@@ -51,7 +51,7 @@ export const GettingStartedChecklist: React.FC = () => {
               Getting Started Checklist ({progressPct}% Complete)
             </h3>
             <p className="text-[10px] text-slate-500">
-              Explore key workflows to get the most from AstraVest Intelligence.
+              Explore key workflows to get the most from FactorialFinance Intelligence.
             </p>
           </div>
         </div>
@@ -74,11 +74,10 @@ export const GettingStartedChecklist: React.FC = () => {
                 if (!isDone) setCompletedItems([...completedItems, task.id]);
                 task.action();
               }}
-              className={`p-2.5 rounded-lg border text-left transition flex items-start space-x-2 ${
-                isDone
+              className={`p-2.5 rounded-lg border text-left transition flex items-start space-x-2 ${isDone
                   ? 'bg-white border-emerald-200 text-slate-700'
                   : 'bg-white border-slate-200 hover:border-blue-300 hover:shadow-xs'
-              }`}
+                }`}
             >
               {isDone ? (
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
